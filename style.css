@@ -1,0 +1,30 @@
+#dn {
+    overflow:auto;
+    background-color: rgb(136, 136, 136);
+    height: 930px;
+    width: 25%;
+    border-color: aqua;
+    border-width: 10px;
+    border-style: ridge;
+    align-self: center;
+    text-align: center;
+    font-size: large;
+    color: black;    
+}
+
+#sus {
+    overflow:auto;
+    background-color: rgb(136, 136, 136);
+    height: 930px;
+    width: 72%;
+    border-color: aqua;
+    border-width: 10px;
+    border-style: ridge;
+    margin-left: 26.5%;
+    margin-top: -950px;
+
+}
+
+.webgl {
+align-self: center;
+}
