@@ -9,11 +9,15 @@ const renderer = new THREE.WebGLRenderer({
     canvas: canvas,
     alpha: false,
 })
-renderer.setSize( 941, 920 );
+renderer.setSize( 1341, 926.015 );
 //document.body.appendChild( renderer.domElement );
 
+const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+scene.add( light );
+
 const spotLight = new THREE.SpotLight( 0xffffff );
-spotLight.position.set( 0, 10, 0 );
+spotLight.position.set( 100, 1000, 100 );
+
 spotLight.castShadow = true;
 
 spotLight.shadow.mapSize.width = 1024;
@@ -23,19 +27,20 @@ spotLight.shadow.camera.near = 500;
 spotLight.shadow.camera.far = 4000;
 spotLight.shadow.camera.fov = 30;
 
-scene.add( spotLight )
+scene.add( spotLight );
 
+const texture = new THREE.TextureLoader().load( 'textures/scrapmetal.jpg' );
 
-const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-const material = new THREE.MeshStandardMaterial( { color: 0x00ff00 } );
+const geometry = new THREE.BoxGeometry( 1, 2, 1 );
+const material = new THREE.MeshStandardMaterial( { map: texture } );
 const cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
+
 
 camera.position.z = 5;
 
 function animate() {
-    requestAnimationFrame( animate );
-
+    requestAnimationFrame( animate );     
     cube.rotation.x += 0.01;
 	cube.rotation.y += 0.01;
 
