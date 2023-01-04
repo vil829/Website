@@ -1,5 +1,5 @@
 #dn {
-    overflow:auto;
+    overflow:hidden;
     background-color: rgb(136, 136, 136);
     height: 930px;
     width: 25%;
@@ -12,19 +12,14 @@
     color: black;    
 }
 
-#sus {
-    overflow:auto;
+#sus {   
+    overflow:hidden;
     background-color: rgb(136, 136, 136);
     height: 930px;
-    width: 72%;
     border-color: aqua;
     border-width: 10px;
     border-style: ridge;
     margin-left: 26.5%;
     margin-top: -950px;
-
 }
 
-.webgl {
-align-self: center;
-}

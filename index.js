@@ -1,15 +1,18 @@
 import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
-const canvas = document.querySelector('canvas.webgl')
+const canvas = document.querySelector('canvas.webgl');
+const div1 = document.getElementById('sus');
+console.log(div1.client)
 
+//window.innerWidth / window.innerHeight
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+const camera = new THREE.PerspectiveCamera( 75, canvas.width / canvas.height, 0.1, 1000 );
 
 const renderer = new THREE.WebGLRenderer({
     canvas: canvas,
     alpha: false,
 })
-renderer.setSize( 1341, 926.015 );
+renderer.setSize( 1348, 930 );
 //document.body.appendChild( renderer.domElement );
 
 const light = new THREE.AmbientLight( 0x404040 ); // soft white light
